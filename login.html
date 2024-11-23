@@ -264,15 +264,35 @@
   opacity: 1;
 }
 .error-message {
-            display: none; /* Hidden by default */
-            background-color: #f44336; /* Red background */
-            color: white; /* White text */
-            padding: 15px;
-            margin: 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            text-align: center;
-        }
+    display: none; /* Hidden by default */
+    background-color: #f44336; /* Red background */
+    color: white; /* White text */
+    padding: 15px;
+    margin: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out, vibrate 0.2s ease-in-out 3;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Vibration animation */
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
   </style>
 </head>
 <body>
