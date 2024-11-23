@@ -47,7 +47,8 @@ Follow these steps to view the project locally:
 ---
 
 ## 📸 Screenshots  
-  ![example](https://github.com/user-attachments/assets/e6706fec-2797-4bb8-8e3d-8d5b75fdd017)
+![example](https://github.com/user-attachments/assets/6f5ba543-e01d-42ae-a604-a7a1d1ac4bf4)
+
 
 
 ---
