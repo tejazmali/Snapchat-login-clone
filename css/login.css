@@ -1,0 +1,202 @@
+ /* General Styles */
+ body {
+    caret-color: transparent;
+    font-family: "Avenir Next", Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+
+  .login-container {
+    text-align: center;
+    max-width: 400px;
+    width: 83%;
+  }
+
+  h1 {
+    font-size: 27px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+  }
+
+  label {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: #55ccffd0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 11px;
+    margin-top: 5px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    caret-color:#00A6FF;
+  }
+
+  input:focus {
+    border-color: #54545436;
+    outline: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 5px rgba(116, 116, 116, 0.17);
+  }
+
+  .password-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .password-container .toggle-password {
+    position: absolute;
+    right: 5px;
+    top: 60%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .save-info {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    font-size: 12px;
+    justify-content: left;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .save-info label {
+    color: #bcbcbc;
+    font-weight: lighter;
+  }
+
+  .alternate-option {
+    display: flex;
+    align-items: center;
+    font-size: 12.8px;
+    color: #55ccffd0;
+    margin-top: 15px;
+    justify-content: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+  }
+
+  .forgot-password {
+    font-size: 12px;
+    color: #55ccffd0;
+    margin-top: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+  }
+
+  .alternate-option a,
+  .forgot-password a {
+    text-decoration: none;
+    color: #55ccffd0;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 5px;
+    margin-top: 20px;
+  }
+
+  .login-button {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: 210px;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #a7abad;
+    border: none;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-button.enabled {
+    background-color: #00A6FF;
+  }
+
+  .login-button:hover {
+    background-color: #027bde;
+  }
+
+  /* Back Button */
+  .back-button {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #55ccffd0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .back-button:hover {
+    color: #027bde;
+  }
+  .incorrect {
+color: red;
+display: none;
+margin-top: -10px;
+margin-left:  5px;
+margin-bottom: 5px;
+font-size: 13px;
+font-weight: 400;
+text-align: left; /* Ensures the text aligns to the left */
+}
+
+  .error-message {
+  display: none; /* Hidden by default */
+  background-color: #f44336; /* Red background */
+  color: white; /* White text */
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out, vibrate 0.2s ease-in-out 3;
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Vibration animation */
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
